@@ -1,0 +1,38 @@
+server :
+        port : 9999
+        
+
+spring :
+
+    datasource :
+                url : jdbc:mysql://localhost:3306/Equity_Data?useSSL=false
+                driverClassName : com.mysql.jdbc.Driver             
+                username : root
+                password : root     
+                         
+    jpa  :
+                hibernate :
+                          ddl-auto : update
+                          
+                properties :
+                          hibernate :
+                                  jdbc.batch_size : 100
+                                  order_inserts   : true
+                                  order_updates   : true
+                                  
+    output :
+                ansi :
+                          enabled : detect
+ 
+logging  :
+
+    level  :
+          org.springframework.web : INFO
+          com.uknown.equity : DEBUG
+
+    file : /home/nagaraj/Desktop/application-debug.log
+
+                     
+                
+               
+               
